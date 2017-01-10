@@ -1,7 +1,7 @@
-==========================================
+
 Instruction for building the Lego US calibration plug-in
 by Yiming Xiao, Apr 22, 2016
-==========================================
+
 
 After building the rest of IBIS (https://github.com/IbisNeuronav/Ibis), proceed as below:
 
