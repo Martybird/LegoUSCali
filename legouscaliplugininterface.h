@@ -1,25 +1,25 @@
-#ifndef __LegoUSCaliPluginInterface_h_
-#define __LegoUSCaliPluginInterface_h_
+#ifndef LEGOUSCALPLUGININTERFACE_H
+#define LEGOUSCALPLUGININTERFACE_H
 
 #include <QObject>
 #include "toolplugininterface.h"
 
 class LegoUSCaliWidget;
 
-class LegoUSCaliPluginInterface : public QObject, public ToolPluginInterface
+class LegoUSCaliPluginInterface : public ToolPluginInterface
 {
 
     Q_OBJECT
-    Q_INTERFACES(ToolPluginInterface)
-    Q_PLUGIN_METADATA(IID "Ibis.LegoUSCaliPluginInterface" )
+    Q_INTERFACES( IbisPlugin )
+    Q_PLUGIN_METADATA( IID "Ibis.LegoUSCaliPluginInterface" )
 
 public:
 
     LegoUSCaliPluginInterface();
     ~LegoUSCaliPluginInterface();
-    virtual QString GetPluginName() { return QString("LegoUSCali"); }
+    virtual QString GetPluginName() { return QString( "LegoUSCali" ); }
     bool CanRun();
-    QString GetMenuEntryString() { return QString("Lego US Calibration"); }
+    QString GetMenuEntryString() { return QString( "Lego US Calibration" ); }
 
     QWidget * CreateFloatingWidget();
 

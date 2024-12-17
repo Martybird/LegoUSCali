@@ -1,5 +1,5 @@
-#ifndef __LegoUSCaliWidget_h_
-#define __LegoUSCaliWidget_h_
+#ifndef LEGOUSCALIWIDGET_H
+#define LEGOUSCALIWIDGET_H
 
 #include <QWidget>
 #include <QString>
