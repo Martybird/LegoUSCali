@@ -97,7 +97,7 @@ LegoUSCaliWidget::LegoUSCaliWidget(QWidget *parent) :
 
 
     // find minctracc, should be built in a directory
-    QFile tracc("/Users/yimingxiao/Documents/programming/MINC-UScali/build/minctracc/minctracc");
+    QFile tracc("/opt/minc/1.9.18/bin/minctracc");
     if( tracc.exists() )
     {
         QFileInfo fi3(tracc);
@@ -187,7 +187,7 @@ void LegoUSCaliWidget::on_acqPushButton_clicked()
 void LegoUSCaliWidget::on_initxfmPushButton_clicked()
 {
 
-    QString xfmname = Application::GetInstance().GetOpenFileName( "Select initial calibration", QDir::homePath(), "xfm file (*.xfm)" );
+    QString xfmname = Application::GetInstance().GetFileNameOpen( "Select initial calibration", QDir::homePath(), "xfm file (*.xfm)" );
     if( !xfmname.isNull() )
     {
         m_initialxfm = xfmname;
